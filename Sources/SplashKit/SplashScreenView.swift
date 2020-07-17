@@ -54,7 +54,7 @@ public struct SplashScreenView: View {
                     LinearGradient(
                         gradient: Gradient(colors: [Color.white,
                                                     Color.white,
-                                                    Color.clear]),
+                                                    Color(white: 1.0, opacity: 0.0)]),
                         startPoint: .center,
                         endPoint: .top)
                 )
