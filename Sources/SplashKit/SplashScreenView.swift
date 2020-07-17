@@ -13,32 +13,49 @@ public struct SplashScreenView: View {
     }
     
     public var body: some View {
+        
+        VStack {
             
-            VStack(alignment: .center) {
+            ScrollView {
                 
-                TitleView(title: content.title, image: content.titleImage, mainColor: content.tintColor)
-                    .padding(.top)
-                    .padding(.top)
-                
-                InfoContainerView(content: content.infoContent, mainColor: content.tintColor)
-                
-                Spacer(minLength: 30)
-                
-                Button {
-                    content.onButtonTap()
-                    presentationMode.wrappedValue.dismiss()
-                } label: {
-                    Text(content.buttonText)
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                        .background(RoundedRectangle(cornerRadius: 15, style: .continuous).fill(content.tintColor))
-                        .padding(.bottom)
+                VStack(alignment: .center) {
+                    
+                    TitleView(title: content.title, image: content.titleImage, mainColor: content.tintColor)
+                        .padding(.top)
+                        .padding(.top)
+                    
+                    InfoContainerView(content: content.infoContent, mainColor: content.tintColor)
+                    
+                    Spacer(minLength: 30)
+                    
                 }
-                .padding(.horizontal)
                 
             }
+            
+            Button {
+                content.onButtonTap()
+                presentationMode.wrappedValue.dismiss()
+            } label: {
+                Text(content.buttonText)
+                    .foregroundColor(.white)
+                    .font(.headline)
+                    .padding()
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                    .background(RoundedRectangle(cornerRadius: 15, style: .continuous).fill(content.tintColor))
+                    .padding(.bottom)
+            }
+            .padding(.horizontal)
+            .padding(.top)
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color(.systemBackground),
+                                                Color(.systemBackground),
+                                                Color.clear]),
+                    startPoint: .bottom,
+                    endPoint: .top)
+            )
+            
+        }
         
     }
     
