@@ -52,8 +52,9 @@ public struct SplashScreenView: View {
                 .padding(.top)
                 .background(
                     LinearGradient(
-                        gradient: Gradient(colors: [Color.white,
-                                                    Color.white,
+                        gradient: Gradient(colors: [Color(.systemBackground),
+                                                    Color(.systemBackground),
+                                                    Color(.systemBackground),
                                                     Color(white: 1.0, opacity: 0.0)]),
                         startPoint: .center,
                         endPoint: .top)
