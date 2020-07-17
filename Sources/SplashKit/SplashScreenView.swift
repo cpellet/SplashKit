@@ -26,7 +26,7 @@ public struct SplashScreenView: View {
                     
                     InfoContainerView(content: content.infoContent, mainColor: content.tintColor)
                     
-                    Spacer(minLength: 30)
+                    Spacer(minLength: 80)
                     
                 }
                 
@@ -52,10 +52,10 @@ public struct SplashScreenView: View {
                 .padding(.top)
                 .background(
                     LinearGradient(
-                        gradient: Gradient(colors: [Color(.systemBackground),
-                                                    Color(.systemBackground),
+                        gradient: Gradient(colors: [Color.white,
+                                                    Color.white,
                                                     Color.clear]),
-                        startPoint: .bottom,
+                        startPoint: .center,
                         endPoint: .top)
                 )
                 
