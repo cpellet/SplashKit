@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-private struct InfoDetailView: View {
+struct InfoDetailView: View {
     
     let content: InfoDetailData
     let mainColor: Color

@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-private struct TitleView: View {
+struct TitleView: View {
     
     let title: (line1: String, line2: String)
     let image: Image

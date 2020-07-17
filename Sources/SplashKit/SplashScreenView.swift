@@ -10,7 +10,7 @@ public struct SplashScreenView: View {
         self.content = contentData
     }
     
-    var body: some View {
+    public var body: some View {
         
         ScrollView {
             
