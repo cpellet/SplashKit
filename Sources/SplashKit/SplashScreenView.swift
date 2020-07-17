@@ -56,7 +56,7 @@ public struct SplashScreenView: View {
                         gradient: Gradient(colors: [Color(.systemBackground),
                                                     Color(.systemBackground),
                                                     Color(.systemBackground),
-                                                    Color(.clear)]),
+                                                    Color(hue: 1.0, saturation: 1.0, brightness: 1.0, opacity: 0.0)]),
                         startPoint: .center,
                         endPoint: .top)
                         .edgesIgnoringSafeArea(.bottom)
