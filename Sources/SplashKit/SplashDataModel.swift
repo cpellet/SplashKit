@@ -11,6 +11,20 @@ public struct SplashScreenData {
     public let onButtonTap: () -> Void
     public let tintColor: Color
     
+    public init(title: (line1: String, line2: String),
+                titleImage: Image,
+                infoContent: [InfoDetailData],
+                buttonText: String,
+                onButtonTap: @escaping () -> Void,
+                tintColor: Color) {
+        self.title = title
+        self.titleImage = titleImage
+        self.infoContent = infoContent
+        self.buttonText = buttonText
+        self.onButtonTap = onButtonTap
+        self.tintColor = tintColor
+    }
+    
 }
 
 public struct InfoDetailData: Identifiable {
@@ -20,5 +34,13 @@ public struct InfoDetailData: Identifiable {
     public let body: String
     
     public let id = UUID()
+    
+    public init(image: Image,
+                title: String,
+                body: String) {
+        self.image = image
+        self.title = title
+        self.body = body
+    }
     
 }
