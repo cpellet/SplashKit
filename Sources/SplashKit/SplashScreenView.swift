@@ -16,9 +16,10 @@ public struct SplashScreenView: View {
             
             VStack(alignment: .center) {
                 
+                Spacer()
+                    .frame(height: 50)
+                
                 TitleView(title: content.title, image: content.titleImage, mainColor: content.tintColor)
-                    .padding(.top)
-                    .padding(.top)
                 
                 InfoContainerView(content: content.infoContent, mainColor: content.tintColor)
                 
