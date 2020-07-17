@@ -4,6 +4,8 @@ import SwiftUI
 
 public struct SplashScreenView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     let content: SplashScreenData
     
     public init(_ contentData: SplashScreenData) {
@@ -26,6 +28,7 @@ public struct SplashScreenView: View {
                 
                 Button {
                     content.onButtonTap()
+                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text(content.buttonText)
                         .foregroundColor(.white)
