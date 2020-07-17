@@ -19,12 +19,10 @@ struct TitleView: View {
                 .accessibility(hidden: true)
             
             Text(title.line1)
-                .fontWeight(.black)
-                .font(.system(size: 36))
+                .font(.system(size: 36, weight: .black, design: .rounded))
             
             Text(title.line2)
-                .fontWeight(.black)
-                .font(.system(size: 36))
+                .font(.system(size: 36, weight: .black, design: .rounded))
                 .foregroundColor(mainColor)
             
         }
