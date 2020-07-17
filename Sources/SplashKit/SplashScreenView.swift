@@ -13,14 +13,12 @@ public struct SplashScreenView: View {
     }
     
     public var body: some View {
-        
-        ScrollView {
             
             VStack(alignment: .center) {
                 
-                Spacer()
-                
                 TitleView(title: content.title, image: content.titleImage, mainColor: content.tintColor)
+                    .padding(.top)
+                    .padding(.top)
                 
                 InfoContainerView(content: content.infoContent, mainColor: content.tintColor)
                 
@@ -41,8 +39,6 @@ public struct SplashScreenView: View {
                 .padding(.horizontal)
                 
             }
-            
-        }
         
     }
     
