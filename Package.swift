@@ -24,8 +24,5 @@ let package = Package(
         .target(
             name: "SplashKit",
             dependencies: []),
-        .testTarget(
-            name: "SplashKitTests",
-            dependencies: ["SplashKit"]),
     ]
 )
