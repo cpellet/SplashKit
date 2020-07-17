@@ -1,9 +1,4 @@
-//
-//  SwiftUIView.swift
-//  
-//
-//  Created by Ben Robinson on 17/7/2020.
-//
+// Copyright (c) 2020 Benjamin Robinson. All Rights Reserved.
 
 import SwiftUI
 
