@@ -38,7 +38,6 @@ public struct SplashScreenView: View {
                 
                 Button {
                     content.onButtonTap()
-                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text(content.buttonText)
                         .foregroundColor(.white)
