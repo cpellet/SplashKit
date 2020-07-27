@@ -16,7 +16,7 @@ struct TitleView: View {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 180, alignment: .center)
+                    .frame(width: UIScreen.main.bounds.width * 0.7, alignment: .center)
                     .accessibility(hidden: true)
             }
             
