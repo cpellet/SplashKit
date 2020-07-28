@@ -5,7 +5,7 @@ import SwiftUI
 struct TitleView: View {
     
     let title: (line1: String, line2: String)
-    let image: Image?
+    let image: AnyView?
     let mainColor: Color
     
     var body: some View {
@@ -14,8 +14,6 @@ struct TitleView: View {
             
             if let image = image {
                 image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
                     .frame(width: UIScreen.main.bounds.width * 0.7, alignment: .center)
                     .accessibility(hidden: true)
             }

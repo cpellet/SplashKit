@@ -5,14 +5,14 @@ import SwiftUI
 public struct SplashScreenData {
     
     public let title: (line1: String, line2: String)
-    public let titleImage: Image?
+    public let titleImage: AnyView?
     public let infoContent: [InfoDetailData]
     public let buttonText: String
     public let onButtonTap: () -> Void
     public let tintColor: Color
     
     public init(title: (line1: String, line2: String),
-                titleImage: Image?,
+                titleImage: AnyView?,
                 infoContent: [InfoDetailData],
                 buttonText: String,
                 onButtonTap: @escaping () -> Void,
