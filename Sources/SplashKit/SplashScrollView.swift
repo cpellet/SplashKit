@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-public struct SplashScrollView<Content>: View where Content: View {
+public struct SplashScrollView<T>: View where T: View {
     public let buttonText: String
     public let buttonColor: Color
     public let buttonTap: () -> Void
-    public let content: () -> Content
+    public let content: () -> T
     
     public var body: some View {
         
