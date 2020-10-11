@@ -13,6 +13,18 @@ public struct SplashScrollView<T>: View where T: View {
     public let buttonTap: () -> Void
     public let content: () -> T
     
+    public init(
+        buttonText: String,
+        buttonColor: Color,
+        buttonTap: @escaping () -> Void,
+        content: @escaping () -> T
+    ) {
+        self.buttonText = buttonText
+        self.buttonColor = buttonColor
+        self.buttonTap = buttonTap
+        self.content = content
+    }
+    
     public var body: some View {
         
         ZStack {
