@@ -1,12 +1,8 @@
-//
-//  SplashScrollView.swift
-//  
-//
-//  Created by Ben Robinson on 11/10/2020.
-//
+// Copyright (c) 2020 Benjamin Robinson. All Rights Reserved.
 
 import SwiftUI
 
+/// Use `SplashScrollView` if you want to control the content of the splash screen.
 public struct SplashScrollView<T>: View where T: View {
     public let buttonText: String
     public let buttonColor: Color
@@ -32,6 +28,8 @@ public struct SplashScrollView<T>: View where T: View {
             ScrollView {
                 
                 content()
+                
+                Spacer(minLength: 80)
                 
             }
             

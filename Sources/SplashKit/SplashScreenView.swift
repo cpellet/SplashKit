@@ -2,10 +2,12 @@
 
 import SwiftUI
 
+/// Represents an Apple-like splash screen view.
 public struct SplashScreenView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    /// The content the `SplashScreenView` should display.
     let content: SplashScreenData
     
     public init(_ contentData: SplashScreenData) {
@@ -23,7 +25,6 @@ public struct SplashScreenView: View {
                     .padding(.top)
                     .padding(.top)
                 InfoContainerView(content: content.infoContent, mainColor: content.tintColor)
-                Spacer(minLength: 80)
             }
         }
         
