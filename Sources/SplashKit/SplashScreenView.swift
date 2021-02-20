@@ -18,7 +18,7 @@ public struct SplashScreenView: View {
         
         SplashScrollView(buttonText: content.buttonText, buttonColor: content.tintColor) {
             content.onButtonTap()
-            presentationMode.wrappedValue.dismiss()
+            //presentationMode.wrappedValue.dismiss()
         } content: {
             VStack(alignment: .center) {
                 SplashTitleView(title: content.title, image: content.titleImage, mainColor: content.tintColor)
