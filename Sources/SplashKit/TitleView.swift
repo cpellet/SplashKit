@@ -2,13 +2,18 @@
 
 import SwiftUI
 
-struct TitleView: View {
-    
+public struct SplashTitleView: View {
     let title: (line1: String, line2: String)
     let image: AnyView?
     let mainColor: Color
     
-    var body: some View {
+    public init(title: (line1: String, line2: String), image: AnyView?, mainColor: Color) {
+        self.title = title
+        self.image = image
+        self.mainColor = mainColor
+    }
+    
+    public var body: some View {
         
         VStack {
             
@@ -19,14 +24,19 @@ struct TitleView: View {
             }
             
             Text(title.line1)
-                .font(.system(size: 36, weight: .black, design: .rounded))
+                .splashTitleStyle()
             
             Text(title.line2)
-                .font(.system(size: 36, weight: .black, design: .rounded))
+                .splashTitleStyle()
                 .foregroundColor(mainColor)
             
         }
         
     }
-    
+}
+
+extension Text {
+    public func splashTitleStyle() -> Text {
+        return self.font(.system(size: 36, weight: .black, design: .rounded))
+    }
 }

@@ -21,7 +21,7 @@ public struct SplashScreenView: View {
             presentationMode.wrappedValue.dismiss()
         } content: {
             VStack(alignment: .center) {
-                TitleView(title: content.title, image: content.titleImage, mainColor: content.tintColor)
+                SplashTitleView(title: content.title, image: content.titleImage, mainColor: content.tintColor)
                     .padding(.top)
                     .padding(.top)
                 InfoContainerView(content: content.infoContent, mainColor: content.tintColor)
