@@ -19,7 +19,7 @@ public struct SplashTitleView: View {
             
             if let image = image {
                 image
-                    .frame(width: UIScreen.main.bounds.width * 0.7, alignment: .center)
+//                    .frame(width: UIScreen.main.bounds.width * 0.7, alignment: .center)
                     .accessibility(hidden: true)
             }
             
