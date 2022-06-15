@@ -25,7 +25,7 @@ public struct SplashScrollView<T>: View where T: View {
         
         ZStack {
             
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 
                 content()
                 
